@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Babynames - Assignment 3</title>
+    <script>
+        function GetNames(){
+            $.ajax({
+                type: "POST",
+                url: "babynames.php",
+                data: jQuery("form").serialize(),
+                success: function(data){
+                    document.getElementById("result").innerHTML = data;
+                }
+            });
+
+            //     var yearSelector = document.getElementById("year");
+            //     var year = yearSelector.options[yearSelector.selectedIndex].value;
+            //     var genderSelector = document.getElementById("gender");
+            //     var gender = genderSelector.options[genderSelector.selectedIndex].value;
+            //     // console.log(year, gender);
+            //     // if(year=="" && gender==""){
+            //     //     document.getElementById("result").innerHTML="";
+            //     //     console.log("not set");
+            //     //     return ;
+            //     // }else{
+            //     //     if(window.XMLHttpRequest){
+            //     //         xmlhttp = new XMLHttpRequest();
+            //     //     }else{
+            //     //         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            //     //     }
+            //     //     xmlhttp.onreadystatechange = function(){
+            //     //         if(this.readyState==4 && this.status == 200){
+            //     //             document.getElementById("result").innerHTML = this.responseText;
+            //     //         }
+            //     //     };
+            //     //     xmlhttp.open("GET", "babynames.php?year="+year+"&gender="+gender, true);
+            //     //     xmlhttp.send();
+            //     // }
+            //     if(window.XMLHttpRequest){
+            //             xmlhttp = new XMLHttpRequest();
+            //         }else{
+            //             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            //         }
+            //         xmlhttp.onreadystatechange = function(){
+            //             if(this.readyState==4 && this.status == 200){
+            //                 document.getElementById("result").innerHTML = this.responseText;
+            //             }
+            //         };
+            //         xmlhttp.open("GET", "babynames.php?year="+year+"&gender="+gender, true);
+            //         xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+    <form id="form" method="post">
+        <select name="year" id="year">
+            <option value="" selected>Select Year</option>
+            <!-- <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option> -->
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+        </select>
+        <select name="gender" id="gender">
+            <option value="" selected>Select Gender</option>
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+        </select>
+        <input type="button"  value="Submit" onclick="GetNames()">
+    </form>
+
+    <div id="result">
+
+    </div>
+</body>
+</html>

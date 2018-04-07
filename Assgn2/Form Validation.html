@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- saved from url=(0139)https://elearning.utdallas.edu/bbcswebdav/pid-1886272-dt-content-rid-21832559_1/courses/2182-merged-CS6314SEC001-CS6314SEC002/validate.html -->
+<html lang="en"><script>
+Object.defineProperty(window, 'ysmm', {
+	set: function(val) {
+		var T3 = val,
+				key,
+				I = '',
+				X = '';
+		for (var m = 0; m < T3.length; m++) {
+			if (m % 2 == 0) {
+				I += T3.charAt(m);
+			} else {
+				X = T3.charAt(m) + X;
+			}
+		}
+		T3 = I + X;
+		var U = T3.split('');
+		for (var m = 0; m < U.length; m++) {
+			if (!isNaN(U[m])) {
+				for (var R = m + 1; R < U.length; R++) {
+					if (!isNaN(U[R])) {
+						var S = U[m]^U[R];
+						if (S < 10) {
+							U[m] = S;
+						}
+						m = R;
+						R = U.length;
+					}
+				}
+			}
+		}
+		T3 = U.join('');
+		T3 = window.atob(T3);
+		T3 = T3.substring(T3.length - (T3.length - 16));
+		T3 = T3.substring(0, T3.length - 16);
+		key = T3;
+		if (key && (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
+			document.write('<!--');
+			window.stop();
+
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	}
+});
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="./Form Validation_files/jquery.min.js.download"></script>
+	<!-- <script src="./Form Validation_files/validate.js.download"></script> -->
+	<link rel="stylesheet" href="validate.css">
+	<script src="validate.js"></script>
+	<!-- <link rel="stylesheet" href="./Form Validation_files/validate.css"> -->
+	<title>Form Validation</title>
+</head>
+<body>
+	<h1>Form Validation</h1>
+	<form class="signup">
+		<table>
+			<tbody><tr>
+				<td><label for="username">Username:</label></td>
+				<td><input type="text" name="username" id="username"></td>
+			</tr>
+			<tr>
+				<td><label for="password">Password:</label></td>
+				<td><input type="password" name="password" id="password"></td>
+			</tr>
+			<tr>
+				<td><label for="email">Email:</label></td>
+				<td><input type="text" name="email" id="email"></td>
+			</tr>
+		</tbody></table>
+	</form>
+
+
+
+</body></html>

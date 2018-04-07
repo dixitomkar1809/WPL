@@ -1,0 +1,120 @@
+<html>
+<head>
+  <title>PracticeWork1</title>
+  <style>
+    .container {
+      margin: 20px 20px 0 0;
+      overflow: auto;
+      }
+      .container h2 {
+        margin-left:10px;
+      }
+      .ImgThumb {
+          float: left;
+      }
+      .ImgThumb img {
+          margin-left: 10px;
+          display: block;
+          height: 200px;
+          width: 250px;
+      }
+      .Desc {
+          margin-left: 210px;
+      }
+      .Desc p {
+        margin-left:70px;
+      }
+      .Title {
+          font-weight: bold;
+          font-size: 200%
+      }
+      footer{
+        background-color:gray;
+        width:100%;
+        height:100px;
+        margin-top:-21px;
+      }
+      footer h2 {
+        text-align:center;
+        padding-top:35px;
+        color:white;
+      }
+      .leftNav {
+        float:left;
+        height:970px;
+        border-right-style:groove;
+        border-color:black;
+        padding-right:100px;
+      }
+      header {
+        background-color:gray;
+        width:100%;
+        height:100px;
+      }
+      header h1 {
+        text-align:center;
+        padding-top:30px;
+        color:white;
+      }
+      .rightSide {
+        height:970px;
+        margin-left:200px;
+      }
+      .miniNav {
+        background-color:black;
+        color:white;
+        height:50px;
+        padding-top:30px;
+        margin-right:100px;
+        margin-left:100px;
+      }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>City Gallery</h2>
+  </header>
+  <div>
+    <div class="leftNav">
+      <ul style="list-style-type:none">
+        <li><a href="#London" style="text-decoration:none">London</a></li>
+        <li><a href="#Paris" style="text-decoration:none">Paris</a></li>
+        <li><a href="#Tokyo" style="text-decoration:none">Tokyo</a></li>
+      </ul>
+    </div>
+    <div class="rightSide">
+        <br />
+        <div class="miniNav">
+          <span style="margin-left:20px">London</span>
+          <span style="margin-left:20px">Paris</span>
+          <span style="margin-left:20px">Tokyo</span>
+        </div>
+        <div class="container" id="London">
+          <h2>London</h2>
+          <div class="ImgThumb"><img src="img/london.jpg" /></div>
+            <div class="Desc">
+                <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to it’s founding by the Romans, who named it Londinium.</p>
+           </div>
+        </div>
+        <div class="container" id="Paris">
+          <h2>Paris</h2>
+          <div class="ImgThumb"><img src="img/paris.jpg" /></div>
+            <div class="Desc">
+              <p>Paris is the capital and the most populous city of France. It has an area of 105 km² (41 mi²) and a population in 2013 of 2,229,621 within the city limits. Paris was founded in the 3rd century BC by a Celtic people called the Parisii, who gave the city its name. By the 12th century, Paris was the largest city in the western world, a prosperous trading center, and the home of the University of Paris, one of the oldest universities in history. At 17th century is the capital of Europe's major power. In the 18th century, it was the center stage of the French Revolution, and was an important center of finance, commerce, fashion, science, and the arts, a position it still retains today</p>
+           </div>
+        </div>
+        <div class="container" id="Tokyo">
+          <h2>Tokyo</h2>
+          <div class="ImgThumb"><img src="img/tokyo.jpg" /></div>
+            <div class="Desc">
+              <p>Tokyo, officially Tokyo is one of the 47 prefectures of Japan, and is both the capital and most populous city of Japan. The Greater Tokyo Area is the most populous metropolitan area in the world.</p>
+           </div>
+        </div>
+    </div>
+  </div>
+  <footer>
+    <h2>CS6314.001 Practice Work 1</h2>
+  </footer>
+</body>
+</html>
